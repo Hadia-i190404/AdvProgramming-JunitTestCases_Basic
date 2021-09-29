@@ -76,6 +76,7 @@ public class TESTCASEALL {
 			
 			//		fail("Not yet implemented");
 		}
+	//Fails due to Exception
 		@Test(expected=Exception.class)
 		public void test7() throws Exception
 		{
