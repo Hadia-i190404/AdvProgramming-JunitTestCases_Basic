@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 
 
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -76,6 +77,7 @@ public class TESTCASEALL {
 			
 			//		fail("Not yet implemented");
 		}
+	
 	//Fails due to Exception
 		@Test(expected=Exception.class)
 		public void test7() throws Exception
@@ -427,4 +429,147 @@ public class TESTCASEALL {
 		queue.display();
 		Assert.assertEquals(5, queue.getkey(5));
 	}
+	@Test
+	public void test22()
+	{
+		int val;
+		MyStack stack = new MyStack(5);
+		try
+		{
+		stack.push(10); //push num=10
+		stack.push(12); //push num=12
+		stack.push(14); //push num=14
+		val=stack.top();
+		}
+		catch (Exception e)
+		{
+			val=10;
+		}
+		Assert.assertEquals(3, stack.size());	
+			
+	}
+	@Test
+	public void test23()
+	{
+		int val;
+		MyStack stack = new MyStack(5);
+		try
+		{
+		stack.push(10); //push num=10
+		stack.push(12); //push num=12
+		stack.push(14); //push num=14
+		val=stack.top();
+		stack.push(16); //push num=16
+		stack.push(18); //push num=18
+		
+		stack.displayStack(); //display
+		}
+		catch (Exception e)
+		{
+			val=10;
+		}
+		Assert.assertEquals(5, stack.size());	
+		
+	}
+	@Test
+	public void test24()
+	{
+		int val;
+		MyStack stack = new MyStack(5);
+		try
+		{
+		stack.push(10); //push num=10
+		stack.push(12); //push num=12
+		stack.push(14); //push num=14
+		stack.push(16); //push num=16
+		stack.push(18); //push num=18
+		
+		stack.displayStack(); //display
+		stack.pop();          //remove topmost element
+		stack.displayStack(); //display stack.
+		stack.pop();          //remove topmost element
+		stack.displayStack(); //display stack.
+		stack.pop();          //remove topmost element
+		stack.displayStack(); //display stack.
+		stack.pop();          //remove topmost element
+		stack.displayStack(); //display stack.
+		stack.pop();          //remove topmost element
+		stack.displayStack(); 
+		}
+		catch (Exception e)
+		{
+			
+		}
+		Assert.assertEquals(0, stack.size());	
+		
+	}
+	@Test
+	public void test25()
+	{
+		Stack stack = new Stack();
+		stack.push(10); //push num=10
+		stack.push(20); //push num=20
+		stack.push(30); //push num=30
+		stack.display();//display stack.
+
+		int val=stack.pop(); //pop element.
+		Assert.assertEquals(30, val);
+	}
+	@Test
+	public void test26()
+	{
+		Stack stack = new Stack();
+		stack.push(10); //push num=10
+		stack.push(20); //push num=20
+		stack.push(30); //push num=30
+		stack.display();//display stack.
+		stack.pop();
+		stack.display();//display stack.
+		stack.push(40); //push num=40
+		stack.display();//display stack.
+		stack.pop();    //pop num.
+		int val=stack.pop();    //pop element 
+		stack.display();//display stack
+		System.out.println(val);
+		Assert.assertEquals(20, val);
+	}
+	@Test
+	public void test27()
+	{
+		Stacks stack = new Stacks();
+		stack.push(10);            //push num = 10
+		stack.push(20);            //push num = 20
+		stack.push(30);            //push num = 30
+
+		stack.display();           //display stack.
+		int val=stack.top();
+		Assert.assertEquals(30, val);
+	}
+	@Test
+	public void test28()
+	{
+		Stacks stack = new Stacks();
+		stack.push(10);            //push num = 10
+		stack.push(20);            //push num = 20
+		stack.push(30);            //push num = 30
+
+		stack.display();           //display stack.
+		stack.top();
+		stack.pop();               //pop topmost element
+		stack.pop();               //pop topmost element
+		stack.display();           //display stack.
+		int val=stack.pop();    
+		Assert.assertEquals(10, val);
+	}
+	@Test
+	public void test29()
+	{
+		Stacks stack = new Stacks();
+		stack.push(10);            //push num = 10
+		stack.push(20);            //push num = 20
+		stack.push(30);            //push num = 30
+		int val=stack.getSize();
+		Assert.assertEquals(3, val);
+	}
+	
 }
